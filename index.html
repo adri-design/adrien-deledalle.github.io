@@ -21,6 +21,18 @@
             margin: 0;
             font-size: 2.5em;
         }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
         main {
             padding: 20px;
         }
@@ -51,23 +63,65 @@
             list-style-type: square;
             padding-left: 20px;
         }
+        .known-riders {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .rider {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .rider img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .rider h3 {
+            margin: 10px 0 5px;
+        }
         footer {
             text-align: center;
             padding: 10px;
             background: rgba(0, 0, 0, 0.8);
+        }
+        .media {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .media img, .media video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .profile-pic {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Adrien Deledalle - Passionné de Kitesurf</h1>
+        <img src="URL_DE_TA_PHOTO" alt="Adrien Deledalle" class="profile-pic">
     </header>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#tips">Conseils</a>
+        <a href="#media">Galerie</a>
+        <a href="#known-riders">Kitesurfeurs connus</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <main>
-        <section>
+        <section id="about">
             <h2>Bienvenue, Pauline!</h2>
             <p>Je suis Adrien Deledalle, passionné de kitesurf. J'adore partager ma passion et mes expériences avec d'autres amateurs de ce sport fantastique. Sur cette page, tu trouveras des conseils pour débutants, notamment comment réaliser de superbes tricks en kitesurf.</p>
         </section>
-        <section class="tips">
+        <section id="tips" class="tips">
             <h2>Conseils pour les débutants</h2>
             <p>Voici quelques conseils pour débuter et progresser en kitesurf :</p>
             <ul>
@@ -79,6 +133,41 @@
                 <li><strong>Sois patient :</strong> Apprendre des tricks peut prendre du temps. Sois patient et persévérant.</li>
             </ul>
         </section>
-        <section class="linkedin">
+        <section id="media" class="media">
+            <h2>Galerie</h2>
+            <img src="URL_DE_TA_PHOTO_1" alt="Photo de kitesurf">
+            <img src="URL_DE_TA_PHOTO_2" alt="Photo de kitesurf">
+            <video controls>
+                <source src="URL_DE_TA_VIDEO" type="video/mp4">
+                Ton navigateur ne supporte pas la balise vidéo.
+            </video>
+        </section>
+        <section id="known-riders" class="known-riders">
+            <h2>Kitesurfeurs connus</h2>
+            <div class="rider">
+                <img src="URL_DU_RIDER_1" alt="Rider 1">
+                <h3>Rider 1</h3>
+                <p>Bio et détails du rider 1.</p>
+            </div>
+            <div class="rider">
+                <img src="URL_DU_RIDER_2" alt="Rider 2">
+                <h3>Rider 2</h3>
+                <p>Bio et détails du rider 2.</p>
+            </div>
+            <div class="rider">
+                <img src="URL_DU_RIDER_3" alt="Rider 3">
+                <h3>Rider 3</h3>
+                <p>Bio et détails du rider 3.</p>
+            </div>
+        </section>
+        <section id="contact" class="linkedin">
             <h2>Réseaux Sociaux</h2>
-            <p>Retrouve-moi sur Linke
+            <p>Retrouve-moi sur LinkedIn pour plus d'actualités et de conseils :</p>
+            <a href="https://www.linkedin.com/in/adrien-deledalle" target="_blank">Mon LinkedIn</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Adrien Deledalle - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
